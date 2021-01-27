@@ -1,10 +1,11 @@
 from rest_framework import serializers
-from .models import Multiple_easy, OX_easy, Test_easy
-from .models import Multiple_normal, OX_normal, Test_normal
-from .models import Multiple_hard, OX_hard, Test_hard
+from .models import OX_law, OX_safety, OX_service, OX_transit
+from .models import Law_easy, Law_normal, Law_hard, Transit_easy, Transit_normal, Transit_hard
+from .models import Safety_easy, Safety_normal, Safety_hard, Service_easy, Service_normal, Service_hard
+from .models import Practice, Challenge
 
 
 class QuizSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Multiple_easy
+        model = OX_law
         fields = ('title', 'body', 'answer')

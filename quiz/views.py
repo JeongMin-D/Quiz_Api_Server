@@ -1,8 +1,9 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from .models import Multiple_easy, OX_easy, Test_easy
-from .models import Multiple_normal, OX_normal, Test_normal
-from .models import Multiple_hard, OX_hard, Test_hard
+from .models import OX_law, OX_safety, OX_service, OX_transit
+from .models import Law_easy, Law_normal, Law_hard, Transit_easy, Transit_normal, Transit_hard
+from .models import Safety_easy, Safety_normal, Safety_hard, Service_easy, Service_normal, Service_hard
+from .models import Practice, Challenge
 from .serializers import QuizSerializer
 import random
 
@@ -12,64 +13,127 @@ def helloAPI(request):
     return Response('hello world!')
 
 @api_view(['GET'])
-def randomMul_easy(request, id):
-    totalMuls_easy = Multiple_easy.objects.all()
-    randomMuls_easy = random.sample(list(totalMuls_easy), id)
-    serializer = QuizSerializer(randomMuls_easy, many=True)
+def randomOX_law(request, id):
+    totalOX_law = OX_law.objects.all()
+    randomOX_law = random.sample(list(totalOX_law), id)
+    serializer = QuizSerializer(randomOX_law, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomMul_normal(request, id):
-    totalMuls_normal = Multiple_normal.objects.all()
-    randomMuls_normal = random.sample(list(totalMuls_normal), id)
-    serializer = QuizSerializer(randomMuls_normal, many=True)
+def randomOX_safety(request, id):
+    totalOX_safety = OX_safety.objects.all()
+    randomOX_safety = random.sample(list(totalOX_safety), id)
+    serializer = QuizSerializer(randomOX_safety, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomMul_hard(request, id):
-    totalMuls_hard = Multiple_hard.objects.all()
-    randomMuls_hard = random.sample(list(totalMuls_hard), id)
-    serializer = QuizSerializer(randomMuls_hard, many=True)
+def randomOX_service(request, id):
+    totalOX_service = OX_service.objects.all()
+    randomOX_service = random.sample(list(totalOX_service), id)
+    serializer = QuizSerializer(randomOX_service, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomOX_easy(request, id):
-    totalOXs_easy = OX_easy.objects.all()
-    randomOXs_easy = random.sample(list(totalOXs_easy), id)
-    serializer = QuizSerializer(randomOXs_easy, many=True)
+def randomOX_transit(request, id):
+    totalOX_transit = OX_transit.objects.all()
+    randomOX_transit = random.sample(list(totalOX_transit), id)
+    serializer = QuizSerializer(randomOX_transit, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomOX_normal(request, id):
-    totalOXs_normal = OX_normal.objects.all()
-    randomOXs_normal = random.sample(list(totalOXs_normal), id)
-    serializer = QuizSerializer(randomOXs_normal, many=True)
+def randomLaw_easy(request, id):
+    totalLaw_easy = Law_easy.objects.all()
+    randomLaw_easy = random.sample(list(totalLaw_easy), id)
+    serializer = QuizSerializer(randomLaw_easy, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomOX_hard(request, id):
-    totalOXs_hard = OX_hard.objects.all()
-    randomOXs_hard = random.sample(list(totalOXs_hard), id)
-    serializer = QuizSerializer(randomOXs_hard, many=True)
+def randomLaw_normal(request, id):
+    totalLaw_normal = Law_normal.objects.all()
+    randomLaw_normal = random.sample(list(totalLaw_normal), id)
+    serializer = QuizSerializer(randomLaw_normal, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomTest_easy(request, id):
-    totalTests_easy = Test_easy.objects.all()
-    randomTests_easy = random.sample(list(totalTests_easy), id)
-    serializer = QuizSerializer(randomTests_easy, many=True)
+def randomLaw_hard(request, id):
+    totalLaw_hard = Law_hard.objects.all()
+    randomLaw_hard = random.sample(list(totalLaw_hard), id)
+    serializer = QuizSerializer(randomLaw_hard, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomTest_normal(request, id):
-    totalTests_normal = Test_normal.objects.all()
-    randomTests_normal = random.sample(list(totalTests_normal), id)
-    serializer = QuizSerializer(randomTests_normal, many=True)
+def randomTransit_easy(request, id):
+    totalTransit_easy = Transit_easy.objects.all()
+    randomTransit_easy = random.sample(list(totalTransit_easy), id)
+    serializer = QuizSerializer(randomTransit_easy, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
-def randomTest_hard(request, id):
-    totalTests_hard = Test_hard.objects.all()
-    randomTests_hard = random.sample(list(totalTests_hard), id)
-    serializer = QuizSerializer(randomTests_hard, many=True)
+def randomTransit_normal(request, id):
+    totalTransit_normal = Transit_normal.objects.all()
+    randomTransit_normal = random.sample(list(totalTransit_normal), id)
+    serializer = QuizSerializer(randomTransit_normal, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomTransit_hard(request, id):
+    totalTransit_hard = Transit_hard.objects.all()
+    randomTransit_hard = random.sample(list(totalTransit_hard), id)
+    serializer = QuizSerializer(randomTransit_hard, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomSafety_easy(request, id):
+    totalSafety_easy = Safety_easy.objects.all()
+    randomSafety_easy = random.sample(list(totalSafety_easy), id)
+    serializer = QuizSerializer(randomSafety_easy, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomSafety_normal(request, id):
+    totalSafety_normal = Safety_normal.objects.all()
+    randomSafety_normal = random.sample(list(totalSafety_normal), id)
+    serializer = QuizSerializer(randomSafety_normal, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomSafety_hard(request, id):
+    totalSafety_hard = Safety_hard.objects.all()
+    randomSafety_hard = random.sample(list(totalSafety_hard), id)
+    serializer = QuizSerializer(randomSafety_hard, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomService_easy(request, id):
+    totalService_easy = Service_easy.objects.all()
+    randomService_easy = random.sample(list(totalService_easy), id)
+    serializer = QuizSerializer(randomService_easy, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomService_normal(request, id):
+    totalService_normal = Service_normal.objects.all()
+    randomService_normal = random.sample(list(totalService_normal), id)
+    serializer = QuizSerializer(randomService_normal, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomService_hard(request, id):
+    totalService_hard = Service_hard.objects.all()
+    randomService_hard = random.sample(list(totalService_hard), id)
+    serializer = QuizSerializer(randomService_hard, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomPractice(request, id):
+    totalPractice = Practice.objects.all()
+    randomPractice = random.sample(list(totalPractice), id)
+    serializer = QuizSerializer(randomPractice, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def randomChallenge(request, id):
+    totalChallenge = Challenge.objects.all()
+    randomChallenge = random.sample(list(Challenge), id)
+    serializer = QuizSerializer(Challenge, many=True)
     return Response(serializer.data)

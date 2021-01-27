@@ -1,47 +1,96 @@
 from django.db import models
 
 # Create your models here.
-class Multiple_easy(models.Model):
+class OX_law(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class Multiple_normal(models.Model):
+class OX_transit(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class Multiple_hard(models.Model):
+class OX_safety(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class OX_easy(models.Model):
+class OX_service(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class OX_normal(models.Model):
+#실전 모의고사 난이도별
+
+class Law_easy(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class OX_hard(models.Model):
+class Law_normal(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class Test_easy(models.Model):
+class Law_hard(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class Test_normal(models.Model):
+class Transit_easy(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
 
-class Test_hard(models.Model):
+class Transit_normal(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Transit_hard(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Safety_easy(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Safety_normal(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Safety_hard(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Service_easy(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Service_normal(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+class Service_hard(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+#실전 모의고사
+class Practice(models.Model):
+    title = models.CharField(max_length=200)
+    body = models.TextField()
+    answer = models.IntegerField()
+
+#도전 100제
+class Challenge(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     answer = models.IntegerField()
