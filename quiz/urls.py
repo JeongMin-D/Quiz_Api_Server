@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import helloAPI, OX_law, OX_safety, OX_service, OX_transit
-from .views import Law_easy, Law_normal, Law_hard, Transit_easy, Transit_normal, Transit_hard
-from .views import Safety_easy, Safety_normal, Safety_hard, Service_easy, Service_normal, Service_hard
-from .views import Practice, Challenge
+from .views import helloAPI, randomOX_law, randomOX_safety, randomOX_service, randomOX_transit
+from .views import randomLaw_easy, randomLaw_normal, randomLaw_hard, randomTransit_easy, randomTransit_normal, randomTransit_hard
+from .views import randomSafety_easy, randomSafety_normal, randomSafety_hard, randomService_easy, randomService_normal, randomService_hard
+from .views import randomPractice, randomChallenge
 
 urlpatterns = [
     path('hello/', helloAPI),

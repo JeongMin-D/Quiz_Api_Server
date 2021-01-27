@@ -134,6 +134,6 @@ def randomPractice(request, id):
 @api_view(['GET'])
 def randomChallenge(request, id):
     totalChallenge = Challenge.objects.all()
-    randomChallenge = random.sample(list(Challenge), id)
-    serializer = QuizSerializer(Challenge, many=True)
+    randomChallenge = random.sample(list(totalChallenge), id)
+    serializer = QuizSerializer(randomChallenge, many=True)
     return Response(serializer.data)
